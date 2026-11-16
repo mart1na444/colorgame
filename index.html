@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f6f3ed">
+    <meta name="description" content="Pon a prueba tu ojo: encuentra el color que corresponde al código RGB.">
+    <title>RGB — Adivina el color</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main class="game-shell">
+      <header class="topbar">
+        <a class="brand" href="./" aria-label="RGB, inicio">
+          <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+          <span>ojo<span class="brand-dot">.</span>RGB</span>
+        </a>
+        <p class="top-note">UN JUEGO DE PERCEPCIÓN</p>
+      </header>
+
+      <section class="intro" aria-labelledby="game-title">
+        <p class="eyebrow"><span class="eyebrow-line"></span>¿QUÉ COLOR ES?</p>
+        <h1 id="game-title">Encuentra el <span>color</span></h1>
+        <p class="intro-copy">Lee el código. Confía en tu ojo. Elige la muestra correcta.</p>
+      </section>
+
+      <section class="game-card" aria-label="Juego de adivinar colores">
+        <div class="challenge">
+          <div class="challenge-label">
+            <span class="live-dot" aria-hidden="true"></span>
+            <span>EL CÓDIGO RGB ES</span>
+          </div>
+          <p class="rgb-code" id="rgb-code" aria-live="polite">rgb(0, 0, 0)</p>
+          <p class="game-message" id="game-message" aria-live="polite">Selecciona la muestra que coincide</p>
+        </div>
+
+        <div class="toolbar" aria-label="Opciones de juego">
+          <button class="new-game" id="new-game" type="button">
+            <span class="refresh-icon" aria-hidden="true">↻</span>
+            <span>Nueva ronda</span>
+          </button>
+          <div class="difficulty" role="group" aria-label="Dificultad">
+            <button class="difficulty-button" id="easy-mode" type="button" aria-pressed="false">Fácil <span>· 3 colores</span></button>
+            <button class="difficulty-button is-active" id="hard-mode" type="button" aria-pressed="true">Difícil <span>· 6 colores</span></button>
+          </div>
+        </div>
+
+        <div class="swatches" id="swatches" aria-label="Elige un color"></div>
+        <footer class="game-footer">
+          <span id="round-label">RONDA 01</span>
+          <span class="score"><span class="score-star" aria-hidden="true">✳</span> Aciertos <strong id="score">0</strong></span>
+        </footer>
+      </section>
+      <p class="page-note">Un poco de color para entrenar la mirada.</p>
+    </main>
+  </body>
+</html>
